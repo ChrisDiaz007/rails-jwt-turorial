@@ -1,4 +1,5 @@
 class Api::V1::SessionsController < Devise::SessionsController
+  include RackSessionFix
   respond_to :json
 
   private
