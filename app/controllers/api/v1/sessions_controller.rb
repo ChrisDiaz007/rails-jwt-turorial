@@ -7,7 +7,7 @@ class Api::V1::SessionsController < Devise::SessionsController
 
   def respond_with(resource, _opts = {})
     # Devise-jwt issues this access token
-    access_token = request.env['warden-jwt_auth.token']
+    # access_token = request.env['warden-jwt_auth.token']
 
     # Generates refresh_token and records/stores in DB(server)
     refresh_token = SecureRandom.hex(64)
